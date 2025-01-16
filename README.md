@@ -1,41 +1,72 @@
-# Secure TODO List App
+# Secure Todo App
 
-## Overview
-A React Native TODO list application with local authentication using Expo's LocalAuthentication module.
+A secure TODO list application built with React Native and Expo, featuring biometric authentication for sensitive operations.
 
 ## Features
-- Secure authentication before accessing todo list
-- Add, edit, and delete todo items
-- Persistent storage using AsyncStorage
-- State management with Redux Toolkit
-- Loading and error states
+
+- View todos without authentication
+- Biometric authentication required for:
+  - Adding new todos
+  - Editing existing todos
+  - Deleting todos
+- Modern and clean UI
+- Redux state management
+- TypeScript support
+- Unit tests
 
 ## Prerequisites
-- Node.js
-- npm or yarn
+
+- Node.js (v14 or higher)
+- Yarn package manager
 - Expo CLI
-- iOS or Android device/simulator
+- iOS Simulator (for iOS) or Android Emulator (for Android)
 
 ## Installation
+
 1. Clone the repository
-2. Navigate to the project directory
-3. Run `npm install`
+2. Install dependencies:
+```bash
+yarn install
+```
 
-## Running the App
-- `npm start`: Start the Expo development server
-- `npm run ios`: Run on iOS simulator
-- `npm run android`: Run on Android simulator
+3. Start the development server:
+```bash
+yarn start
+```
 
-## Running Tests
-`npm test`
+4. Run on iOS:
+```bash
+yarn ios
+```
 
-## Technologies Used
+Or Android:
+```bash
+yarn android
+```
+
+## Testing
+
+Run the test suite:
+```bash
+yarn test
+```
+
+## Project Structure
+
+- `/app` - Main application code
+  - `/components` - Reusable React components
+  - `/store` - Redux store configuration and slices
+  - `/hooks` - Custom React hooks
+- `/__tests__` - Test files
+
+## Security Features
+
+The app uses Expo's Local Authentication module to implement biometric authentication (Face ID/Touch ID on iOS, Fingerprint on Android) for sensitive operations like adding, editing, or deleting todos.
+
+## Tech Stack
+
 - React Native
 - Expo
-- Redux Toolkit (State Management)
-- AsyncStorage
-- LocalAuthentication
-
-## Security Notes
-- Requires device authentication before accessing todo list
-- Uses local biometric or passcode authentication
+- Redux Toolkit
+- TypeScript
+- Jest & React Native Testing Library
