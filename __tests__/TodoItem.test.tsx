@@ -3,7 +3,12 @@ import { render, fireEvent } from '@testing-library/react-native';
 import { Provider } from 'react-redux';
 import { configureStore } from '@reduxjs/toolkit';
 import todoReducer from '../app/store/todoSlice';
-import { TodoItem } from '../app/components/TodoItem';
+import TodoItem from '../app/components/TodoItem';
+
+// Mock the @expo/vector-icons
+jest.mock('@expo/vector-icons', () => ({
+  Ionicons: ({ testID }) => <div testID={testID}>Ionicons</div>,
+}));
 
 // Mock the useAuth hook
 jest.mock('../app/hooks/useAuth', () => ({
@@ -37,22 +42,22 @@ describe('TodoItem', () => {
   });
 
   it('shows edit button', () => {
-    const { getByText } = render(
+    const { getByTestId } = render(
       <Provider store={mockStore}>
         <TodoItem {...mockTodo} />
       </Provider>
     );
 
-    expect(getByText('Edit')).toBeTruthy();
+    expect(getByTestId('edit-icon')).toBeTruthy();
   });
 
   it('shows delete button', () => {
-    const { getByText } = render(
+    const { getByTestId } = render(
       <Provider store={mockStore}>
         <TodoItem {...mockTodo} />
       </Provider>
     );
 
-    expect(getByText('Delete')).toBeTruthy();
+    expect(getByTestId('delete-icon')).toBeTruthy();
   });
 });

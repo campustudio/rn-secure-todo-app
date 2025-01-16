@@ -57,6 +57,7 @@ export default function TodoItem({ id, text, completed }: TodoItemProps) {
       >
         <View style={[styles.checkbox, completed && styles.checkboxChecked]}>
           <Ionicons 
+            testID="checkbox-icon"
             name={completed ? "checkbox" : "square-outline"} 
             size={20} 
             color={completed ? "#6200ee" : "#6200ee"} 
@@ -86,6 +87,7 @@ export default function TodoItem({ id, text, completed }: TodoItemProps) {
           hitSlop={8}
         >
           <Ionicons 
+            testID="edit-icon"
             name={isEditing ? "checkmark" : "pencil"} 
             size={20} 
             color="#6200ee" 
@@ -99,7 +101,12 @@ export default function TodoItem({ id, text, completed }: TodoItemProps) {
           ]}
           hitSlop={8}
         >
-          <Ionicons name="trash-outline" size={20} color="#ff3b30" />
+          <Ionicons 
+            testID="delete-icon"
+            name="trash-outline" 
+            size={20} 
+            color="#ff3b30" 
+          />
         </Pressable>
       </View>
     </View>
