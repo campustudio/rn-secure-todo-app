@@ -1,3 +1,7 @@
+# Demo Video
+
+see demo-video.MP4 at root folder
+
 # Secure Todo App
 
 A secure TODO list application built with React Native and Expo, featuring biometric authentication for sensitive operations.
@@ -25,21 +29,25 @@ A secure TODO list application built with React Native and Expo, featuring biome
 
 1. Clone the repository
 2. Install dependencies:
+
 ```bash
 yarn install
 ```
 
 3. Start the development server:
+
 ```bash
 yarn start
 ```
 
 4. Run on iOS:
+
 ```bash
 yarn ios
 ```
 
 Or Android:
+
 ```bash
 yarn android
 ```
@@ -47,6 +55,7 @@ yarn android
 ## Testing
 
 Run the test suite:
+
 ```bash
 yarn test
 ```
