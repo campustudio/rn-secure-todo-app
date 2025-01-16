@@ -8,8 +8,8 @@ A secure TODO list application built with React Native and Expo, featuring biome
 
 ## Features
 
-- View todos without authentication
 - Biometric authentication required for:
+  - Viewing todos
   - Adding new todos
   - Editing existing todos
   - Deleting todos
@@ -70,7 +70,7 @@ yarn test
 
 ## Security Features
 
-The app uses Expo's Local Authentication module to implement biometric authentication (Face ID/Touch ID on iOS, Fingerprint on Android) for sensitive operations like adding, editing, or deleting todos.
+The app uses Expo's Local Authentication module to implement biometric authentication (Face ID/Touch ID on iOS, Fingerprint on Android) for sensitive operations like viewing, adding, editing, or deleting todos.
 
 ## Tech Stack
 
